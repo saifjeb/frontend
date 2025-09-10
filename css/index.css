@@ -1,0 +1,116 @@
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      border-left: 5px solid #e67e22;
+      padding-left: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    button {
+      background: #3498db;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    img {
+      max-width: 200px;
+      display: block;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    ul, ol {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #3498db;
+      color: white;
+    }
+
+    td a {
+      color: #e67e22;
+      text-decoration: none;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      margin-right: 15px;
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    mark {
+      background: #ffeb3b;
+    }
+    del {
+      color: red;
+      text-decoration: line-through;
+    }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: radial-gradient(1200px 600px at 20% -10%, #223, transparent 60%), #111827;
+    color: #e5e7eb;
+  }
+
+  .container {
+    background: rgba(17, 24, 39, 0.7);
+  }
+}
