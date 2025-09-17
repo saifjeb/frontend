@@ -103,36 +103,3 @@ socials {
 .socials a:hover {
   color: #2980b9;
 }
-.card button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  background: #3498db;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-.card button:hover {
-  background: #2980b9;
-}
-.card h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 20px 0;
-  padding: 15px;
-}
-#main {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 30px;
-  text-align: center;
-  margin: 0px 20px;
-}
-.card img {
-  border-radius: 10px 10px 0 0;
-}
