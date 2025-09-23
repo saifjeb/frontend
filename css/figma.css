@@ -1,0 +1,166 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        padding-top: 200px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        position: fixed;    
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000; 
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo span {
+      color: #C13409;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #C13409;
+    }
+
+    .auth-container {
+     display: flex;
+     align-items: center;
+     background: #C13409;
+     border-radius: 30px;
+     padding: 5px;
+     width: fit-content;
+     position: relative;
+     z-index: 20;
+}
+    .auth-container a {
+      text-decoration: none;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 12px 28px;
+      border-radius: 30px;
+      transition: 0.3s;
+      position: relative;
+      z-index: 21;
+}
+    .auth-container .signup {
+      color: white;
+      background: transparent;
+}
+    .auth-container .signin {
+      background: black;
+      color: white;
+      margin-left: 8px;
+}
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      position: relative;
+    }
+    .offer {
+      color: #C13409;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+     
+
+    .hero-text {
+      max-width: 50%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: white; 
+      position: relative;
+}
+
+    .hero-text h1 span {
+      background: linear-gradient(90deg, #ffffff, #ff5722, #c13409);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+}
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+    .buttons a {
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .book {
+      background: white;
+      color: black;
+    }
+    .order {
+      background:#C13409;
+      color: white;
+    }
+ .hero-image {
+  position: relative;
+  width: 400px; 
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.hero-image .burger {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-image .tomato {
+  position: absolute;
+  top: -50px;   
+  left: 50px;   
+  width: 180px; 
+  z-index: 2;
+}
+
