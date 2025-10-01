@@ -52,3 +52,46 @@ if(age != ageAString){
 // <= less than or equal to
 // && and
 // || or
+
+// function : block of code for commands that comands execute when called
+// 1- delcare function
+// function functionName(){
+// code
+// }
+function hello(){
+    alert("hello")
+}
+function jsBgColorChange(){
+    var jspart =document.getElementById("jspart")
+    console.log("jspart:", jspart)
+    jspart.style.backgroundColor = "lightblue"
+}
+
+// 2- call function
+function calculate() {
+    var num1 = document.getElementById("num1").value
+    var num2 = document.getElementById("num2").value
+    var op = document.getElementById("op").value
+    console.log(num1, num2, op)
+
+var result = 0
+switch(op){
+    case "+":
+        result =parseInt(num1) + parseInt(num2)
+
+        break;
+    case "-":
+        result =parseInt(num1) - parseInt(num2)
+
+        break;  
+    case "*":
+        result =parseInt(num1) * parseInt(num2)
+
+        break;
+    case "/":
+        result =parseInt(num1) / parseInt(num2)
+
+        break;
+}
+document.getElementById("result").innerHTML = result
+}
