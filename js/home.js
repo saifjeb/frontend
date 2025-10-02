@@ -69,29 +69,47 @@ function jsBgColorChange(){
 
 // 2- call function
 function calculate() {
-    var num1 = document.getElementById("num1").value
-    var num2 = document.getElementById("num2").value
-    var op = document.getElementById("op").value
-    console.log(num1, num2, op)
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+  var op = document.getElementById("op").value;
 
-var result = 0
-switch(op){
-    case "+":
-        result =parseInt(num1) + parseInt(num2)
+  var result = 0;
+  switch(op){
+      case "+":
+          result = parseInt(num1) + parseInt(num2);
+          break;
+      case "-":
+          parseInt(num1) - parseInt(num2);
+          break;  
+      case "*":
+          parseInt(num1) * parseInt(num2);
+          break;
+          
+      case "/":
+          result = num2 !== 0 ? num1 / num2 : NaN;
+          break;
+  }
 
-        break;
-    case "-":
-        result =parseInt(num1) - parseInt(num2)
+  let message = `Result: ${result}`;
 
-        break;  
-    case "*":
-        result =parseInt(num1) * parseInt(num2)
+  if (!Number.isFinite(result)) {
+    message += " (invalid operation)";
+  } else if (!Number.isInteger(result)) {
+    message += " — prime check applies to integers only.";
+  } else if (result <= 1) {
+    message += " — not prime (must be > 1).";
+  } else {
+    message += isPrime(result) ? " — prime ✅" : " — not prime ❌";
+  }
 
-        break;
-    case "/":
-        result =parseInt(num1) / parseInt(num2)
-
-        break;
+  document.getElementById("result").innerText = message;
 }
-document.getElementById("result").innerHTML = result
+
+function isPrime(n) {
+  if (n % 2 === 0) return n === 2;
+  const limit = Math.floor(Math.sqrt(n));
+  for (let i = 3; i <= limit; i += 2) {
+    if (n % i === 0) return false;
+  }
+  return true;
 }
