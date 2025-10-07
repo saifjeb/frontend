@@ -64,7 +64,13 @@ function hello(){
 function jsBgColorChange(){
     var jspart =document.getElementById("jspart")
     console.log("jspart:", jspart)
-    jspart.style.backgroundColor = "lightblue"
+    if (jspart.style.backgroundColor == 'lightblue') {
+    jspart.style.backgroundColor = 'red'
+    } 
+    else {
+    jspart.style.backgroundColor = 'lightblue'
+    }
+    
 }
 
 // 2- call function
@@ -113,3 +119,10 @@ function isPrime(n) {
   }
   return true;
 }
+
+var switchButton = document.getElementsByClassName('switch')[0]
+switchButton.addEventListener('click', function() {
+  var checkbox = document.getElementById('checkbox')
+  console.log(document.getElementById("myCheckbox"));
+  console.log(checkbox.checked)
+})
