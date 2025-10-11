@@ -85,10 +85,10 @@ function calculate() {
           result = parseInt(num1) + parseInt(num2);
           break;
       case "-":
-          parseInt(num1) - parseInt(num2);
-          break;  
+           result = parseInt(num1) - parseInt(num2);
+          break; 
       case "*":
-          parseInt(num1) * parseInt(num2);
+          result =  parseInt(num1) * parseInt(num2);
           break;
           
       case "/":
@@ -126,3 +126,16 @@ switchButton.addEventListener('click', function() {
   console.log(document.getElementById("myCheckbox"));
   console.log(checkbox.checked)
 })
+
+function gen5Elements() {
+    var elementdiv = document.getElementById("gen5Elements");
+    var ul = document.createElement("ul")
+    for (let index =0; index <= 5; index++) {
+        var li = document.createElement("li")
+        var a = document.createElement("a")
+        a.innerHTML = "element " + (index+1)
+        li.appendChild(a)
+        ul.appendChild(li)
+    }
+    elementdiv.appendChild(ul)
+}
