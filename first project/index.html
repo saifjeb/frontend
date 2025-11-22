@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Café Aurora — a cozy coffee shop serving artisanal coffee, seasonal pastries, and weekend acoustic nights.">
+<title>Café Aurora — Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="./style.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">Café Aurora</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+  <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+  <!-- Hero Section -->
+<header class="hero">
+  <img src="images/cafe-interior.jpg" class="hero-img" alt="Café Aurora Interior">
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-center">
+    <h1 class="display-4 fw-bold">Welcome to Café Aurora</h1>
+    <p class="lead">Your cozy spot for handcrafted coffee & delightful bites.</p>
+    <a href="menu.html" class="btn btn-primary">See Our Menu</a>
+  </div>
+</header>
+
+  <!-- Main Section -->
+<section class="py-5">
+<div class="container text-center">
+<h2 class="section-title mb-4">What's Brewing?</h2>
+<p class="text-muted mb-5">From espresso to desserts, every cup and bite is made with care. Discover local flavors, good company, and a warm atmosphere at Café Aurora.
+</p>
+
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card h-100 text-start">
+<img src="images/Cozy-Music.jpg" class="card-img-top" alt="Live Acoustic Fridays">
+<div class="card-body">
+<h5 class="card-title">Live Acoustic Fridays</h5>
+<p class="card-text">Unwind with mellow sets from local artists every Friday night — the perfect end to your week.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card h-100 text-start">
+<img src="images/Seasonal-Pastries.jpg" class="card-img-top" alt="Seasonal Pastries">
+<div class="card-body">
+<h5 class="card-title">Seasonal Pastries</h5>
+<p class="card-text">Freshly baked croissants and tarts inspired by each season’s best ingredients.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card h-100 text-start">
+<img src="images/Barista-Workshops.jpg" class="card-img-top" alt="Barista Workshops">
+<div class="card-body">
+<h5 class="card-title">Barista Workshops</h5>
+<p class="card-text">Learn the art of coffee making with our head barista. Perfect for enthusiasts and beginners alike!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+  <!-- Today’s Special Modal Trigger -->
+<button id="specialTrigger" type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#specialModal"></button>
+
+<!-- Today’s Special Modal -->
+<div class="modal fade" id="specialModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Today’s Special</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="d-flex align-items-center gap-3">
+<img src="images/Truffle Mushroom Risotto.jpg" class="rounded" width="96" height="96" alt="Special dish">
+<div>
+<h6 class="mb-1">Truffle Mushroom Risotto</h6>
+<p class="mb-0 text-muted">Creamy arborio rice, wild mushrooms, and shaved truffle perfection.</p>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<a href="menu.html" class="btn btn-primary">See Menu</a>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- Footer -->
+<footer class="bg-dark text-light py-4 mt-5 text-center">
+<div class="container">
+<p class="mb-1">&copy; <span id="year"></span> Café Aurora. All rights reserved.</p>
+<div class="small">
+<a href="#" class="link-light text-decoration-none mx-2">Privacy</a> |
+<a href="#" class="link-light text-decoration-none mx-2">Terms</a> |
+<a href="contact.html" class="btn btn-outline-light btn-sm ms-2">Book a Table</a>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./main.js"></script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+window.addEventListener("load", () => {
+const trigger = document.getElementById("specialTrigger");
+if (trigger) setTimeout(() => trigger.click(), 2000);
+});
+</script>
+</body>
+</html>

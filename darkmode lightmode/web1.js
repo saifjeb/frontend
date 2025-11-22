@@ -26,7 +26,7 @@ themeToggle.addEventListener('change', () => {
   localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
 });
 
-// Smooth scroll
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
